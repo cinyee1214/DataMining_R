@@ -4,7 +4,7 @@
 
 rm(list = ls())
 
-setwd("/Users/cinyee/Desktop/Stevens/2020spring/513/HW")
+setwd("/Users/cinyee/Desktop/Stevens/2020spring/513/DataMiningHW")
 
 data <- read.csv("breast-cancer-wisconsin.data.csv")
 View(data)
@@ -17,8 +17,8 @@ data[data == "?"] <- NA
 data <- na.omit(data)
 data <- data[ , -1]
 data$F6 <- as.integer(as.character(data$F6))
-data$Class<-as.factor(data$Class)
-levels(data$Class)<-c("benign","malignant")
+data$Class <- as.factor(data$Class)
+levels(data$Class) <- c("benign","malignant")
 View(data)
 
 summary(data)
